@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import { Component } from 'react';
 import './App.css';
+import {MyClassComponent} from "./Components/Myclasscomponent"
+import { MyFunctionalComponent } from './Components/Myfunctionalcomponent';
 
-function App() {
+
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      showClass:false,
+      showFunc:false,
+    }
+  }
+  toggleShowClassComponent = () =>{
+    this.setState((prevState)=>({ showClass: !prevState.showClass}));
+  }
+
+  toggleShowFuncComponent = () =>{
+    this.setState((prevState)=>({ showFunc: !prevState.showFunc}));
+  }
+
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <h1 className='Heading'>Styling Using Function and class based Component</h1>
+    <div className="Function-Heading" onClick={this.toggleShowFuncComponent}>To see Styling in Functional Component</div>
+    <div className='Class-Heading' onClick={this.toggleShowClassComponent}>To See Styling in Class Component</div>
+    { this.state.showClass && <MyClassComponent/>}
+   {this.state.showFunc && < MyFunctionalComponent/>}
+    </>
   );
+}
 }
 
 export default App;

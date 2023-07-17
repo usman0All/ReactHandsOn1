@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body{
+    background-image: linear-gradient(0deg, #00ffe7, pink,transparent);
+    background-repeat:repeat-y;
+    background-size: cover;
+    height: 100vh;
+    overflow-y: hidden;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .Heading{
+    text-align: center;
+    text-shadow: 5px 2px aqua;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .Class-Heading{
+    position: absolute; left: 60%; top: 30%;
+    font-size: larger;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    height: 20px; width: 350px;
+    background-color: aqua;
+    text-align: center;
+    cursor: pointer;
   }
-}
+  
+  .Class-Container{
+      border: 2px solid black;
+      background-color: violet;
+      height: 190px ; width: 350px;
+      padding: 15px; 
+      border-radius: 15px;
+      position: absolute; left: 60%; top: 50%;
+      line-height: 28px;
+  }
+  
+  .External-Css{
+    text-align: center;
+  }
+  
+  .Function-Heading{
+    position: absolute; top: 30%; left: 10%;
+    font-size: larger;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    height: 20px; width: 350px;
+    background-color: aqua;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .Function-Container{
+    border: 2px solid black;
+    background-color: violet;
+    height: 190px ; width: 350px;
+    padding: 15px; 
+    border-radius: 15px;
+    position: absolute; left: 10%; top: 50%;
+    line-height: 28px;
+  }
